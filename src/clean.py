@@ -12,10 +12,10 @@ client['job'] = client['job'].str.replace('.', '_')
 client['education'] = client['education'].str.replace('.', '_')
 client['education'] = client['education'].str.replace('unknown', str(np.NaN))
 
-client['credit_default'] = client['credit_default'].map({'yes':1,'unknown':0, 'no': 0})
+client['credit_default'] = client['credit_default'].map({'yes': 1,'unknown': 0, 'no': 0})
 client['credit_default'] = client['credit_default'].astype(bool)
 
-client['mortgage'] = client['mortgage'].map({'yes':1,'unknown':0, 'no': 0})
+client['mortgage'] = client['mortgage'].map({'yes':1,'unknown': 0, 'no': 0})
 client['mortgage'] = client['mortgage'].astype(bool)
 
 client.to_csv('client.csv', index=False)
@@ -23,10 +23,10 @@ client.to_csv('client.csv', index=False)
 #  create the campaign datafame
 campaign = data_df[['client_id', 'number_contacts', 'contact_duration', 'previous_campaign_contacts', 'previous_outcome', 'campaign_outcome']]
 
-campaign['previous_outcome'] = campaign['previous_outcome'].map({'success':1,'failure':0, 'nonexistent': 0})
+campaign['previous_outcome'] = campaign['previous_outcome'].map({'success': 1,'failure': 0, 'nonexistent': 0})
 campaign['previous_outcome'] = campaign['previous_outcome'].astype(bool)
 
-campaign['campaign_outcome'] = campaign['campaign_outcome'].map({'yes':1,'unknown':0, 'no': 0})
+campaign['campaign_outcome'] = campaign['campaign_outcome'].map({'yes': 1,'unknown': 0, 'no': 0})
 campaign['campaign_outcome'] = campaign['campaign_outcome'].astype(bool)
 
 last_contact_date = []

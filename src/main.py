@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
 
 # # Assign url of file: url
 # url = 'https://assets.datacamp.com/course/importing_data_into_r/latitude.xls'
