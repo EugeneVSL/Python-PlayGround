@@ -1,6 +1,6 @@
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 # # Assign url of file: url
 # url = 'https://assets.datacamp.com/course/importing_data_into_r/latitude.xls'
@@ -15,9 +15,11 @@ from bs4 import BeautifulSoup
 # pass
 
 
+url = 'https://www.wikipedia.org/'
+r = requests.get(url)
 
-# url = 'https://www.wikipedia.org/'
-# r = requests.get(url)
-# text = r.text
+r.headers.c
 
-# print(text)
+if (r.status_code == requests.codes.not_found):
+    text = r.text
+    print(text)
