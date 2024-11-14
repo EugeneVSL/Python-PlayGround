@@ -1,7 +1,8 @@
 import pandas as pd
 import requests
+import datetime as dt
 # from bs4 import BeautifulSoup
-
+pd.rea
 # # Assign url of file: url
 # url = 'https://assets.datacamp.com/course/importing_data_into_r/latitude.xls'
 
@@ -15,11 +16,14 @@ import requests
 # pass
 
 
-url = 'https://www.wikipedia.org/'
-r = requests.get(url)
+# url = 'https://www.wikipedia.org/'
+# r = requests.get(url)
 
-r.headers.c
+# r.headers.c
 
-if (r.status_code == requests.codes.not_found):
-    text = r.text
-    print(text)
+# if (r.status_code == requests.codes.not_found):
+#     text = r.text
+#     print(text)
+
+today_date = dt.date.today()
+print(today_date)

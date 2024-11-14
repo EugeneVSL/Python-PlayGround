@@ -13,3 +13,4 @@ html_doc = r.text
 
 # Create a BeautifulSoup object from the HTML: soup
 soup = BeautifulSoup(html_doc)
+print(soup.prettify)

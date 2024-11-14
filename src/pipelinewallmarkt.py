@@ -38,7 +38,7 @@ def transform(raw_data):
     columns = ['Store_ID', 'Weekly_Sales', 'CPI', 'Unemployment', 'Month']
     raw_data = raw_data.loc[:, columns]
     
-    return raw_data;
+    return raw_data
 
 # Call the transform() function and pass the merged DataFrame
 clean_data = transform(merged_df)
